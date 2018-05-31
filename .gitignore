@@ -52,3 +52,4 @@ eagle.epf
 
 
 # End of https://www.gitignore.io/api/eagle
+*.ini
