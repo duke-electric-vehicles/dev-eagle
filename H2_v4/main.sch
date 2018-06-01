@@ -1039,23 +1039,24 @@ These are standard reverse protection diodes and small signal diodes. SMA packag
 <wire x1="6.858" y1="3.429" x2="0.508" y2="3.429" width="0.127" layer="51"/>
 <wire x1="0.508" y1="3.429" x2="0.508" y2="0.254" width="0.127" layer="51"/>
 </package>
-<package name="PSOP-10">
-<smd name="1" x="0" y="1" dx="1.5" dy="0.3" layer="1"/>
-<smd name="2" x="0" y="0.5" dx="1.5" dy="0.3" layer="1"/>
-<smd name="3" x="0" y="0" dx="1.5" dy="0.3" layer="1"/>
-<smd name="4" x="0" y="-0.5" dx="1.5" dy="0.3" layer="1"/>
-<smd name="5" x="0" y="-1" dx="1.5" dy="0.3" layer="1"/>
-<smd name="6" x="4.5" y="-1" dx="1.5" dy="0.3" layer="1"/>
-<smd name="7" x="4.5" y="-0.5" dx="1.5" dy="0.3" layer="1"/>
-<smd name="8" x="4.5" y="0" dx="1.5" dy="0.3" layer="1"/>
-<smd name="9" x="4.5" y="0.5" dx="1.5" dy="0.3" layer="1"/>
-<smd name="10" x="4.5" y="1" dx="1.5" dy="0.3" layer="1"/>
-<wire x1="3.496" y1="1.5" x2="3.496" y2="-1.5" width="0.127" layer="21"/>
-<wire x1="3.496" y1="-1.5" x2="1.004" y2="-1.5" width="0.127" layer="21"/>
-<wire x1="1.004" y1="-1.5" x2="1.004" y2="1.5" width="0.127" layer="21"/>
-<wire x1="1.004" y1="1.5" x2="3.496" y2="1.5" width="0.127" layer="21"/>
-<circle x="1.527" y="1" radius="0.22360625" width="0.127" layer="21"/>
-<text x="2.286" y="0" size="0.6096" layer="25" align="center">&gt;NAME</text>
+<package name="PSOP-10-EP">
+<smd name="1" x="-2.286" y="1" dx="1.5" dy="0.3" layer="1"/>
+<smd name="2" x="-2.286" y="0.5" dx="1.5" dy="0.3" layer="1"/>
+<smd name="3" x="-2.286" y="0" dx="1.5" dy="0.3" layer="1"/>
+<smd name="4" x="-2.286" y="-0.5" dx="1.5" dy="0.3" layer="1"/>
+<smd name="5" x="-2.286" y="-1" dx="1.5" dy="0.3" layer="1"/>
+<smd name="6" x="2.214" y="-1" dx="1.5" dy="0.3" layer="1"/>
+<smd name="7" x="2.214" y="-0.5" dx="1.5" dy="0.3" layer="1"/>
+<smd name="8" x="2.214" y="0" dx="1.5" dy="0.3" layer="1"/>
+<smd name="9" x="2.214" y="0.5" dx="1.5" dy="0.3" layer="1"/>
+<smd name="10" x="2.214" y="1" dx="1.5" dy="0.3" layer="1"/>
+<wire x1="1.21" y1="1.5" x2="1.21" y2="-1.5" width="0.127" layer="21"/>
+<wire x1="1.21" y1="-1.5" x2="-1.282" y2="-1.5" width="0.127" layer="21"/>
+<wire x1="-1.282" y1="-1.5" x2="-1.282" y2="1.5" width="0.127" layer="21"/>
+<wire x1="-1.282" y1="1.5" x2="1.21" y2="1.5" width="0.127" layer="21"/>
+<circle x="-0.759" y="1" radius="0.22360625" width="0.127" layer="21"/>
+<text x="0" y="0" size="0.6096" layer="25" align="center">&gt;NAME</text>
+<smd name="PAD" x="0" y="0" dx="1.524" dy="1.8796" layer="1"/>
 </package>
 <package name="78XXL">
 <description>&lt;b&gt;VOLTAGE REGULATOR&lt;/b&gt;</description>
@@ -1507,10 +1508,10 @@ These are standard reverse protection diodes and small signal diodes. SMA packag
 <gate name="G$1" symbol="LTC7001" x="0" y="0"/>
 </gates>
 <devices>
-<device name="" package="PSOP-10">
+<device name="" package="PSOP-10-EP">
 <connects>
 <connect gate="G$1" pin="BST" pad="9"/>
-<connect gate="G$1" pin="GND" pad="3"/>
+<connect gate="G$1" pin="GND" pad="3 PAD"/>
 <connect gate="G$1" pin="INP" pad="4"/>
 <connect gate="G$1" pin="OVLO" pad="5"/>
 <connect gate="G$1" pin="TGDN" pad="6"/>
