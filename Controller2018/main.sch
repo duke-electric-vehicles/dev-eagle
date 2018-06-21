@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.4.0">
+<eagle version="9.0.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -7462,9 +7462,9 @@ Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LE
 <part name="C26" library="SparkFun-Capacitors" deviceset="CAP" device="1206" value="4.7uF"/>
 <part name="C28" library="SparkFun-Capacitors" deviceset="CAP" device="1206" value="4.7uF"/>
 <part name="D2" library="SparkFun-DiscreteSemi" deviceset="DIODE" device="ES3J" value="TVS"/>
-<part name="R5" library="SparkFun-Passives" deviceset="RESISTOR" device="0603-RES" value="4.7k"/>
-<part name="R6" library="SparkFun-Passives" deviceset="RESISTOR" device="0603-RES" value="4.7k"/>
-<part name="R25" library="SparkFun-Passives" deviceset="RESISTOR" device="0603-RES" value="4.7k"/>
+<part name="R5" library="SparkFun-Passives" deviceset="RESISTOR" device="0603-RES" value="1k"/>
+<part name="R6" library="SparkFun-Passives" deviceset="RESISTOR" device="0603-RES" value="1k"/>
+<part name="R25" library="SparkFun-Passives" deviceset="RESISTOR" device="0603-RES" value="1k"/>
 <part name="C39" library="SparkFun-Passives" deviceset="CAP" device="0603-CAP" value="1uF"/>
 <part name="R26" library="SparkFun-Passives" deviceset="RESISTOR" device="0603-RES" value="100k"/>
 <part name="GND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
@@ -7508,9 +7508,9 @@ Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LE
 <part name="C33" library="SparkFun-Capacitors" deviceset="CAP" device="1206" value="4.7uF"/>
 <part name="Q7" library="SparkFun-DiscreteSemi" deviceset="MOSFET-PCHANNEL" device=""/>
 <part name="U$29" library="F-J" deviceset="VCC" device=""/>
-<part name="C14" library="SparkFun-Passives" deviceset="CAP" device="0603-CAP" value=".1uF"/>
-<part name="C34" library="SparkFun-Passives" deviceset="CAP" device="0603-CAP" value=".1uF"/>
-<part name="C35" library="SparkFun-Passives" deviceset="CAP" device="0603-CAP" value=".1uF"/>
+<part name="C14" library="SparkFun-Passives" deviceset="CAP" device="0603-CAP" value="10nF"/>
+<part name="C34" library="SparkFun-Passives" deviceset="CAP" device="0603-CAP" value="10nF"/>
+<part name="C35" library="SparkFun-Passives" deviceset="CAP" device="0603-CAP" value="10nF"/>
 <part name="U$12" library="2018" deviceset="OPAMP_QUAD" device=""/>
 <part name="R31" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603" value="16.2k"/>
 <part name="R33" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603" value="1K"/>

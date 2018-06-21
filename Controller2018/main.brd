@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.4.0">
+<eagle version="9.0.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -35,7 +35,7 @@
 <layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="25" name="tNames" color="7" fill="1" visible="no" active="yes"/>
 <layer number="26" name="bNames" color="7" fill="1" visible="no" active="yes"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
@@ -1790,9 +1790,11 @@ Please make sure your boards conform to these design rules.</description>
 <param name="slThermalsForVias" value="0"/>
 <param name="dpMaxLengthDifference" value="10mm"/>
 <param name="dpGapFactor" value="2.5"/>
+<param name="checkAngle" value="0"/>
 <param name="checkFont" value="1"/>
 <param name="checkRestrict" value="1"/>
 <param name="checkStop" value="0"/>
+<param name="checkValues" value="0"/>
 <param name="useDiameter" value="13"/>
 <param name="maxErrors" value="50"/>
 </designrules>
@@ -1944,9 +1946,9 @@ Please make sure your boards conform to these design rules.</description>
 <element name="D2" library="SparkFun-DiscreteSemi" package="SMC" value="TVS" x="45.5" y="64.5" rot="R180">
 <attribute name="PROD_ID" value="DIO-12441" x="45.5" y="64.5" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="R5" library="SparkFun-Passives" package="0603-RES" value="4.7k" x="77.5" y="41"/>
-<element name="R6" library="SparkFun-Passives" package="0603-RES" value="4.7k" x="77.5" y="38.5"/>
-<element name="R25" library="SparkFun-Passives" package="0603-RES" value="4.7k" x="77.5" y="36"/>
+<element name="R5" library="SparkFun-Passives" package="0603-RES" value="1k" x="77.5" y="41"/>
+<element name="R6" library="SparkFun-Passives" package="0603-RES" value="1k" x="77.5" y="38.5"/>
+<element name="R25" library="SparkFun-Passives" package="0603-RES" value="1k" x="77.5" y="36"/>
 <element name="C39" library="SparkFun-Passives" package="0603-CAP" value="1uF" x="59.5" y="62" rot="R90"/>
 <element name="R26" library="SparkFun-Passives" package="0603-RES" value="100k" x="62" y="62" rot="R270"/>
 <element name="C27" library="SparkFun-Capacitors" package="0805" value="47u" x="58.5" y="5" rot="R90"/>
@@ -1985,9 +1987,9 @@ Please make sure your boards conform to these design rules.</description>
 <element name="Q7" library="SparkFun-DiscreteSemi" package="SOT23-3" value="MOSFET-PCHANNEL" x="89" y="11.5">
 <attribute name="PROD_ID" value="TRANS-08285" x="89" y="11.5" size="1.778" layer="27" display="off"/>
 </element>
-<element name="C14" library="SparkFun-Passives" package="0603-CAP" value=".1uF" x="73.5" y="41" rot="R180"/>
-<element name="C34" library="SparkFun-Passives" package="0603-CAP" value=".1uF" x="73.5" y="38.5" rot="R180"/>
-<element name="C35" library="SparkFun-Passives" package="0603-CAP" value=".1uF" x="73.5" y="36" rot="R180"/>
+<element name="C14" library="SparkFun-Passives" package="0603-CAP" value="10nF" x="73.5" y="41" rot="R180"/>
+<element name="C34" library="SparkFun-Passives" package="0603-CAP" value="10nF" x="73.5" y="38.5" rot="R180"/>
+<element name="C35" library="SparkFun-Passives" package="0603-CAP" value="10nF" x="73.5" y="36" rot="R180"/>
 <element name="U$12" library="2018" package="TSSOP-14" value="OPAMP_QUAD" x="57.5" y="42" rot="R90"/>
 <element name="R31" library="SparkFun-Resistors" package="0603-RES" value="16.2k" x="51" y="35.5"/>
 <element name="R33" library="SparkFun-Resistors" package="0603-RES" value="1K" x="51" y="37"/>
