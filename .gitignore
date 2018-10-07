@@ -50,7 +50,7 @@ eagle.epf
 *.lck
 
 #DS_Store
-.DS_Store
+**.DS_Store
 
 # End of https://www.gitignore.io/api/eagle
 *.ini
