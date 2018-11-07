@@ -160,7 +160,7 @@
 <board>
 <plain>
 <text x="36.9139" y="26.6107" size="1.778" layer="21">SEM</text>
-<text x="49.5" y="49" size="1.4224" layer="22" rot="MR0">Designed by GDC, JP, PLG, AM for
+<text x="49.5" y="49" size="1.27" layer="22" font="vector" ratio="12" rot="MR0">Designed by GDC, JP, PLG, AM for
 the Shell Eco Marathon</text>
 <wire x1="0" y1="0" x2="0" y2="65" width="0" layer="20"/>
 <wire x1="0" y1="65" x2="85" y2="65" width="0" layer="20"/>
@@ -169,7 +169,7 @@ the Shell Eco Marathon</text>
 <text x="72.5" y="49" size="1.016" layer="21" rot="R90">Throttle</text>
 <text x="72.5" y="37.5" size="1.016" layer="21" rot="R90">I2C</text>
 <text x="72.5" y="20" size="1.016" layer="21" rot="R90">Encoder</text>
-<text x="49.5" y="44.5" size="1.27" layer="22" rot="MR0">Motor Controller Rev 2.1
+<text x="49.5" y="44.5" size="1.016" layer="22" font="vector" ratio="15" rot="MR0">Motor Controller Rev 2.1
 Nov 2018</text>
 <text x="81" y="34" size="1.016" layer="21" font="vector" ratio="15" rot="R90">H</text>
 <text x="75.5" y="34" size="1.016" layer="21" font="vector" ratio="15" rot="R90">L</text>
