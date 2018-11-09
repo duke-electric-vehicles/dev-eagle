@@ -1,0 +1,14 @@
+List of H2_v2 PCB bodges:
+
+* Bypass cap (10uF) on 12V regulator output
+* 60V 10A Schottky on top of high side FET for better rectifying during deadtime
+* Low side FET pulldown gate resistor (1-10k)
+* Bridge driver current limiting resistor on LO pin (10 Ohms)
+* Teensy link pin 9 to 4 for low side FET
+* Teensy connect pin 10 via wire to purge valve MOSFET gate
+* SLICE THE ORIGINAL TRACE FROM 4 to purge gate
+* Pulldown resistors on valve+fan gates
+* Rectifying diode across fan terminals (currently using MOSFET body diode)
+* Short out input filtering inductor
+* Teensy - connect I2C SMD pins for 29/30 SCL1/SDA1 to the 18/19 SCL0/SDA0 on the actual Teensy
+* Speaker - connect a 1k resistor between pins to recharge the piezo element
