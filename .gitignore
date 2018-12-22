@@ -38,6 +38,8 @@ eagle.epf
 *.drl
 *.gpi
 *.pls
+# *.xln # keep the gerber files for reference
+# *.gbr
 
 *.drd
 *.drd.*
@@ -54,3 +56,4 @@ eagle.epf
 
 # End of https://www.gitignore.io/api/eagle
 *.ini
+
