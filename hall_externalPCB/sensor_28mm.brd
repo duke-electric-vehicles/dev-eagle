@@ -492,18 +492,6 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="-1.358" y1="18" x2="-1.358" y2="19" width="0.254" layer="1"/>
 <wire x1="-1" y1="19" x2="-4" y2="19" width="0.254" layer="1"/>
 <wire x1="-4" y1="19" x2="-6.7744625" y2="16.963859375" width="0.254" layer="1" curve="60"/>
-<polygon width="0.254" layer="1" isolate="0.4064" orphans="yes">
-<vertex x="-14" y="24" curve="-45"/>
-<vertex x="-4.343146875" y="28"/>
-<vertex x="0" y="28"/>
-<vertex x="4.343146875" y="28" curve="-45"/>
-<vertex x="14" y="24"/>
-<vertex x="7.5" y="13" curve="45"/>
-<vertex x="2.671571875" y="15"/>
-<vertex x="0" y="15"/>
-<vertex x="-2.671571875" y="15" curve="45"/>
-<vertex x="-7.5" y="13"/>
-</polygon>
 </signal>
 <signal name="GND">
 <contactref element="U1" pad="2"/>
@@ -531,18 +519,6 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="4.421" y1="15.579" x2="4.421" y2="16.579" width="0.254" layer="16"/>
 <wire x1="-5.08" y1="25" x2="-5" y2="24.92" width="0.254" layer="16"/>
 <wire x1="-5" y1="24.92" x2="-5" y2="24.4" width="0.254" layer="16"/>
-<polygon width="0.254" layer="16" isolate="0.4064" orphans="yes">
-<vertex x="-14" y="24" curve="-45"/>
-<vertex x="-4.343146875" y="28"/>
-<vertex x="0" y="28"/>
-<vertex x="4.343146875" y="28" curve="-45"/>
-<vertex x="14" y="24"/>
-<vertex x="7.5" y="13" curve="45"/>
-<vertex x="2.671571875" y="15"/>
-<vertex x="0" y="15"/>
-<vertex x="-2.671571875" y="15" curve="45"/>
-<vertex x="-7.5" y="13"/>
-</polygon>
 </signal>
 <signal name="N$2">
 <contactref element="U1" pad="3"/>
@@ -558,7 +534,7 @@ Please make sure your boards conform to these design rules.</description>
 <contactref element="J1" pad="3"/>
 <wire x1="-3.50118125" y1="15.663221875" x2="-3.207140625" y2="17.52670625" width="0.254" layer="1"/>
 <wire x1="-3.207140625" y1="17.52670625" x2="-2.4705625" y2="18.263284375" width="0.254" layer="1"/>
-<via x="-2.4705625" y="18.263284375" extent="1-16" drill="0.35"/>
+<via x="-2.4705625" y="18.263284375" extent="1-16" drill="0.4"/>
 <wire x1="-2.4705625" y1="18.263284375" x2="0" y2="20.733846875" width="0.254" layer="16"/>
 <wire x1="0" y1="20.733846875" x2="0" y2="25" width="0.254" layer="16"/>
 </signal>
@@ -567,7 +543,7 @@ Please make sure your boards conform to these design rules.</description>
 <contactref element="J1" pad="2"/>
 <wire x1="1.27" y1="16" x2="1.81581875" y2="15.54581875" width="0.254" layer="1"/>
 <wire x1="1.81581875" y1="15.54581875" x2="1.81581875" y2="17.81581875" width="0.254" layer="1"/>
-<via x="1.81581875" y="17.81581875" extent="1-16" drill="0.35"/>
+<via x="1.81581875" y="17.81581875" extent="1-16" drill="0.4"/>
 <wire x1="1.81581875" y1="17.81581875" x2="1.81581875" y2="24.59581875" width="0.254" layer="16"/>
 <wire x1="1.81581875" y1="24.59581875" x2="2.54" y2="25" width="0.254" layer="16"/>
 </signal>
