@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.3.2">
+<eagle version="9.2.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
 <setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -1155,6 +1155,108 @@ Source: http://ww1.microchip.com/downloads/en/devicedoc/39632c.pdf</description>
 <vertex x="7.149884375" y="0.25106875"/>
 </polygon>
 </package>
+<package name="PDIP-T24">
+<description>&lt;b&gt;NT (R-PDIP-T24)&lt;/b&gt; PLASTIC DUAL-IN-LINE PACKAGE&lt;p&gt;
+Source: http://focus.ti.com/lit/ml/mpdi004a/mpdi004a.pdf</description>
+<wire x1="-14.986" y1="-0.635" x2="-14.986" y2="-2.794" width="0.1524" layer="21"/>
+<wire x1="-14.986" y1="0.635" x2="-14.986" y2="-0.635" width="0.1524" layer="21" curve="-180"/>
+<wire x1="14.986" y1="-2.794" x2="14.986" y2="2.794" width="0.1524" layer="21"/>
+<wire x1="-14.986" y1="-2.794" x2="14.986" y2="-2.794" width="0.1524" layer="21"/>
+<wire x1="-14.986" y1="2.794" x2="14.986" y2="2.794" width="0.1524" layer="21"/>
+<wire x1="-14.986" y1="2.794" x2="-14.986" y2="0.635" width="0.1524" layer="21"/>
+<pad name="1" x="-13.97" y="-3.81" drill="0.8128" diameter="1.2" rot="R90"/>
+<pad name="2" x="-11.43" y="-3.81" drill="0.8128" diameter="1.2" rot="R90"/>
+<pad name="3" x="-8.89" y="-3.81" drill="0.8128" diameter="1.2" rot="R90"/>
+<pad name="4" x="-6.35" y="-3.81" drill="0.8128" diameter="1.2" rot="R90"/>
+<pad name="5" x="-3.81" y="-3.81" drill="0.8128" diameter="1.2" rot="R90"/>
+<pad name="6" x="-1.27" y="-3.81" drill="0.8128" diameter="1.2" rot="R90"/>
+<pad name="7" x="1.27" y="-3.81" drill="0.8128" diameter="1.2" rot="R90"/>
+<pad name="8" x="3.81" y="-3.81" drill="0.8128" diameter="1.2" rot="R90"/>
+<pad name="9" x="6.35" y="-3.81" drill="0.8128" diameter="1.2" rot="R90"/>
+<pad name="10" x="8.89" y="-3.81" drill="0.8128" diameter="1.2" rot="R90"/>
+<pad name="11" x="11.43" y="-3.81" drill="0.8128" diameter="1.2" rot="R90"/>
+<pad name="12" x="13.97" y="-3.81" drill="0.8128" diameter="1.2" rot="R90"/>
+<pad name="13" x="13.97" y="3.81" drill="0.8128" diameter="1.2" rot="R90"/>
+<pad name="14" x="11.43" y="3.81" drill="0.8128" diameter="1.2" rot="R90"/>
+<pad name="15" x="8.89" y="3.81" drill="0.8128" diameter="1.2" rot="R90"/>
+<pad name="16" x="6.35" y="3.81" drill="0.8128" diameter="1.2" rot="R90"/>
+<pad name="17" x="3.81" y="3.81" drill="0.8128" diameter="1.2" rot="R90"/>
+<pad name="18" x="1.27" y="3.81" drill="0.8128" diameter="1.2" rot="R90"/>
+<pad name="19" x="-1.27" y="3.81" drill="0.8128" diameter="1.2" rot="R90"/>
+<pad name="20" x="-3.81" y="3.81" drill="0.8128" diameter="1.2" rot="R90"/>
+<pad name="21" x="-6.35" y="3.81" drill="0.8128" diameter="1.2" rot="R90"/>
+<pad name="22" x="-8.89" y="3.81" drill="0.8128" diameter="1.2" rot="R90"/>
+<pad name="23" x="-11.43" y="3.81" drill="0.8128" diameter="1.2" rot="R90"/>
+<pad name="24" x="-13.97" y="3.81" drill="0.8128" diameter="1.2" rot="R90"/>
+<text x="-15.2908" y="-2.667" size="1.778" layer="25" ratio="10" rot="R90">&gt;NAME</text>
+<text x="-13.462" y="-0.889" size="1.778" layer="27" ratio="10">&gt;VALUE</text>
+</package>
+<package name="SOIC16LWB">
+<description>&lt;b&gt;SMALL OUTLINE PACKAGE&lt;/b&gt; 10.3 x 10.3 &lt;p&gt;
+Source: http://www.lsicsi.com/pdfs/Drawings/SOIC%20Outline%20Dwgs.pdf</description>
+<wire x1="5.055" y1="3.635" x2="5.055" y2="-3.635" width="0.2032" layer="21"/>
+<wire x1="5.055" y1="-3.635" x2="-5.03" y2="-3.635" width="0.2032" layer="51"/>
+<wire x1="-5.03" y1="-3.635" x2="-5.03" y2="3.635" width="0.2032" layer="21"/>
+<wire x1="-5.03" y1="3.635" x2="5.055" y2="3.635" width="0.2032" layer="51"/>
+<circle x="-3.89" y="-1.8" radius="0.6427" width="0.2032" layer="21"/>
+<smd name="1" x="-4.445" y="-4.475" dx="0.6" dy="1.8" layer="1"/>
+<smd name="2" x="-3.175" y="-4.475" dx="0.6" dy="1.8" layer="1"/>
+<smd name="3" x="-1.905" y="-4.475" dx="0.6" dy="1.8" layer="1"/>
+<smd name="4" x="-0.635" y="-4.475" dx="0.6" dy="1.8" layer="1"/>
+<smd name="5" x="0.635" y="-4.475" dx="0.6" dy="1.8" layer="1"/>
+<smd name="6" x="1.905" y="-4.475" dx="0.6" dy="1.8" layer="1"/>
+<smd name="7" x="3.175" y="-4.475" dx="0.6" dy="1.8" layer="1"/>
+<smd name="8" x="4.445" y="-4.475" dx="0.6" dy="1.8" layer="1"/>
+<smd name="9" x="4.445" y="4.475" dx="0.6" dy="1.8" layer="1" rot="R180"/>
+<smd name="10" x="3.175" y="4.475" dx="0.6" dy="1.8" layer="1" rot="R180"/>
+<smd name="11" x="1.905" y="4.475" dx="0.6" dy="1.8" layer="1" rot="R180"/>
+<smd name="12" x="0.635" y="4.475" dx="0.6" dy="1.8" layer="1" rot="R180"/>
+<smd name="13" x="-0.635" y="4.475" dx="0.6" dy="1.8" layer="1" rot="R180"/>
+<smd name="14" x="-1.905" y="4.475" dx="0.6" dy="1.8" layer="1" rot="R180"/>
+<smd name="15" x="-3.175" y="4.475" dx="0.6" dy="1.8" layer="1"/>
+<smd name="16" x="-4.445" y="4.475" dx="0.6" dy="1.8" layer="1"/>
+<text x="-3.94" y="-0.63" size="1.27" layer="25">&gt;NAME</text>
+<text x="-5.515" y="-3.275" size="1.27" layer="27" rot="R90">&gt;VALUE</text>
+<rectangle x1="-4.6949" y1="-5.0651" x2="-4.1951" y2="-3.7349" layer="51"/>
+<rectangle x1="-3.4249" y1="-5.0651" x2="-2.9251" y2="-3.7349" layer="51"/>
+<rectangle x1="-2.1549" y1="-5.0651" x2="-1.6551" y2="-3.7349" layer="51"/>
+<rectangle x1="-0.8849" y1="-5.0651" x2="-0.3851" y2="-3.7349" layer="51"/>
+<rectangle x1="0.3851" y1="-5.0651" x2="0.8849" y2="-3.7349" layer="51"/>
+<rectangle x1="1.6551" y1="-5.0651" x2="2.1549" y2="-3.7349" layer="51"/>
+<rectangle x1="2.9251" y1="-5.0651" x2="3.4249" y2="-3.7349" layer="51"/>
+<rectangle x1="4.1951" y1="-5.0651" x2="4.6949" y2="-3.7349" layer="51"/>
+<rectangle x1="4.1951" y1="3.7349" x2="4.6949" y2="5.0651" layer="51" rot="R180"/>
+<rectangle x1="2.9251" y1="3.7349" x2="3.4249" y2="5.0651" layer="51" rot="R180"/>
+<rectangle x1="1.6551" y1="3.7349" x2="2.1549" y2="5.0651" layer="51" rot="R180"/>
+<rectangle x1="0.3851" y1="3.7349" x2="0.8849" y2="5.0651" layer="51" rot="R180"/>
+<rectangle x1="-0.8849" y1="3.7349" x2="-0.3851" y2="5.0651" layer="51" rot="R180"/>
+<rectangle x1="-2.1549" y1="3.7349" x2="-1.6551" y2="5.0651" layer="51" rot="R180"/>
+<rectangle x1="-3.4249" y1="3.7349" x2="-2.9251" y2="5.0651" layer="51"/>
+<rectangle x1="-4.6949" y1="3.7349" x2="-4.1951" y2="5.0651" layer="51"/>
+</package>
+<package name="SOT-23-6">
+<wire x1="1.55" y1="0.95" x2="-1.55" y2="0.95" width="0.127" layer="51"/>
+<wire x1="-1.55" y1="0.95" x2="-1.55" y2="-0.95" width="0.127" layer="51"/>
+<wire x1="-1.55" y1="-0.95" x2="1.55" y2="-0.95" width="0.127" layer="51"/>
+<wire x1="1.55" y1="-0.95" x2="1.55" y2="0.95" width="0.127" layer="51"/>
+<wire x1="-1.3" y1="1" x2="-1.6" y2="1" width="0.2032" layer="21"/>
+<wire x1="-1.6" y1="1" x2="-1.6" y2="0.7" width="0.2032" layer="21"/>
+<wire x1="1.3" y1="1" x2="1.6" y2="1" width="0.2032" layer="21"/>
+<wire x1="1.6" y1="1" x2="1.6" y2="0.7" width="0.2032" layer="21"/>
+<wire x1="1.6" y1="-0.7" x2="1.6" y2="-1" width="0.2032" layer="21"/>
+<wire x1="1.6" y1="-1" x2="1.3" y2="-1" width="0.2032" layer="21"/>
+<wire x1="-1.6" y1="-0.7" x2="-1.6" y2="-1" width="0.2032" layer="21"/>
+<wire x1="-1.6" y1="-1" x2="-1.3" y2="-1" width="0.2032" layer="21"/>
+<circle x="-1" y="-0.5" radius="0.2236" width="0.2032" layer="21"/>
+<smd name="4" x="0.95" y="1.3" dx="0.8" dy="0.51" layer="1" rot="R90"/>
+<smd name="5" x="0" y="1.3" dx="0.8" dy="0.51" layer="1" rot="R90"/>
+<smd name="6" x="-0.95" y="1.3" dx="0.8" dy="0.51" layer="1" rot="R90"/>
+<smd name="1" x="-0.95" y="-1.3" dx="0.8" dy="0.51" layer="1" rot="R90"/>
+<smd name="2" x="0" y="-1.3" dx="0.8" dy="0.51" layer="1" rot="R90"/>
+<smd name="3" x="0.95" y="-1.3" dx="0.8" dy="0.51" layer="1" rot="R90"/>
+<text x="-1.524" y="2.032" size="0.4064" layer="25">&gt;NAME</text>
+<text x="-1.524" y="-2.54" size="0.4064" layer="27">&gt;VALUE</text>
+</package>
 </packages>
 <symbols>
 <symbol name="AOZ1037">
@@ -2041,6 +2143,65 @@ Source: http://ww1.microchip.com/downloads/en/devicedoc/39632c.pdf</description>
 <wire x1="5.08" y1="2.54" x2="5.08" y2="-2.54" width="0.254" layer="94"/>
 <wire x1="5.08" y1="-2.54" x2="-5.08" y2="-2.54" width="0.254" layer="94"/>
 <text x="0" y="0" size="2.54" layer="94" align="center">DEV</text>
+</symbol>
+<symbol name="ATF22">
+<pin name="IN2" x="-15.24" y="7.62" length="middle"/>
+<pin name="IN3" x="-15.24" y="5.08" length="middle"/>
+<pin name="IN4" x="-15.24" y="2.54" length="middle"/>
+<pin name="IN5" x="-15.24" y="0" length="middle"/>
+<pin name="IN6" x="-15.24" y="-2.54" length="middle"/>
+<pin name="IN7" x="-15.24" y="-5.08" length="middle"/>
+<pin name="IN8" x="-15.24" y="-7.62" length="middle"/>
+<pin name="IN9" x="-15.24" y="-10.16" length="middle"/>
+<pin name="IN10" x="-15.24" y="-12.7" length="middle"/>
+<pin name="IN11" x="-15.24" y="-15.24" length="middle"/>
+<pin name="VCC" x="-2.54" y="22.86" length="middle" rot="R270"/>
+<pin name="GND" x="0" y="22.86" length="middle" rot="R270"/>
+<pin name="CLK" x="2.54" y="22.86" length="middle" rot="R270"/>
+<pin name="IN13" x="-15.24" y="-17.78" length="middle"/>
+<pin name="IO14" x="15.24" y="7.62" length="middle" rot="R180"/>
+<pin name="IO15" x="15.24" y="5.08" length="middle" rot="R180"/>
+<pin name="IO16" x="15.24" y="2.54" length="middle" rot="R180"/>
+<pin name="IO17" x="15.24" y="0" length="middle" rot="R180"/>
+<pin name="IO18" x="15.24" y="-2.54" length="middle" rot="R180"/>
+<pin name="IO19" x="15.24" y="-5.08" length="middle" rot="R180"/>
+<pin name="IO20" x="15.24" y="-7.62" length="middle" rot="R180"/>
+<pin name="IO21" x="15.24" y="-10.16" length="middle" rot="R180"/>
+<pin name="IO22" x="15.24" y="-12.7" length="middle" rot="R180"/>
+<pin name="IO23" x="15.24" y="-15.24" length="middle" rot="R180"/>
+<wire x1="-10.16" y1="-20.32" x2="-10.16" y2="17.78" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="17.78" x2="10.16" y2="17.78" width="0.254" layer="94"/>
+<wire x1="10.16" y1="17.78" x2="10.16" y2="-20.32" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-20.32" x2="-10.16" y2="-20.32" width="0.254" layer="94"/>
+</symbol>
+<symbol name="SI8231">
+<pin name="PWM" x="-15.24" y="-2.54" length="middle"/>
+<pin name="VDDI" x="-15.24" y="5.08" length="middle"/>
+<pin name="GNDI" x="-15.24" y="2.54" length="middle"/>
+<pin name="DISABLE" x="-15.24" y="-15.24" length="middle"/>
+<pin name="DT" x="-15.24" y="-17.78" length="middle"/>
+<pin name="VDDA" x="15.24" y="5.08" length="middle" rot="R180"/>
+<pin name="VOA" x="15.24" y="-2.54" length="middle" rot="R180"/>
+<pin name="GNDA" x="15.24" y="2.54" length="middle" rot="R180"/>
+<pin name="VDDB" x="15.24" y="-15.24" length="middle" rot="R180"/>
+<pin name="VOB" x="15.24" y="-10.16" length="middle" rot="R180"/>
+<pin name="GNDB" x="15.24" y="-17.78" length="middle" rot="R180"/>
+<wire x1="10.16" y1="-20.32" x2="10.16" y2="7.62" width="0.254" layer="94"/>
+<wire x1="10.16" y1="7.62" x2="-10.16" y2="7.62" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="7.62" x2="-10.16" y2="-20.32" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="-20.32" x2="10.16" y2="-20.32" width="0.254" layer="94"/>
+</symbol>
+<symbol name="R1200">
+<pin name="VDD" x="-2.54" y="10.16" length="middle" rot="R270"/>
+<pin name="GND" x="2.54" y="10.16" length="middle" rot="R270"/>
+<pin name="CE" x="-12.7" y="-10.16" length="middle"/>
+<pin name="LX" x="-12.7" y="-5.08" length="middle"/>
+<pin name="VOUT" x="12.7" y="-5.08" length="middle" rot="R180"/>
+<pin name="VFB" x="12.7" y="-10.16" length="middle" rot="R180"/>
+<wire x1="-7.62" y1="-12.7" x2="7.62" y2="-12.7" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-12.7" x2="7.62" y2="5.08" width="0.254" layer="94"/>
+<wire x1="7.62" y1="5.08" x2="-7.62" y2="5.08" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="5.08" x2="-7.62" y2="-12.7" width="0.254" layer="94"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -3269,6 +3430,89 @@ Source: http://ww1.microchip.com/downloads/en/devicedoc/39632c.pdf</description>
 </gates>
 <devices>
 <device name="" package="DEV">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="ATF22">
+<gates>
+<gate name="G$1" symbol="ATF22" x="33.02" y="0"/>
+</gates>
+<devices>
+<device name="" package="PDIP-T24">
+<connects>
+<connect gate="G$1" pin="CLK" pad="1"/>
+<connect gate="G$1" pin="GND" pad="12"/>
+<connect gate="G$1" pin="IN10" pad="10"/>
+<connect gate="G$1" pin="IN11" pad="11"/>
+<connect gate="G$1" pin="IN13" pad="13"/>
+<connect gate="G$1" pin="IN2" pad="2"/>
+<connect gate="G$1" pin="IN3" pad="3"/>
+<connect gate="G$1" pin="IN4" pad="4"/>
+<connect gate="G$1" pin="IN5" pad="5"/>
+<connect gate="G$1" pin="IN6" pad="6"/>
+<connect gate="G$1" pin="IN7" pad="7"/>
+<connect gate="G$1" pin="IN8" pad="8"/>
+<connect gate="G$1" pin="IN9" pad="9"/>
+<connect gate="G$1" pin="IO14" pad="14"/>
+<connect gate="G$1" pin="IO15" pad="15"/>
+<connect gate="G$1" pin="IO16" pad="16"/>
+<connect gate="G$1" pin="IO17" pad="17"/>
+<connect gate="G$1" pin="IO18" pad="18"/>
+<connect gate="G$1" pin="IO19" pad="19"/>
+<connect gate="G$1" pin="IO20" pad="20"/>
+<connect gate="G$1" pin="IO21" pad="21"/>
+<connect gate="G$1" pin="IO22" pad="22"/>
+<connect gate="G$1" pin="IO23" pad="23"/>
+<connect gate="G$1" pin="VCC" pad="24"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SI8231">
+<gates>
+<gate name="G$1" symbol="SI8231" x="0" y="0"/>
+</gates>
+<devices>
+<device name="SOIC16W" package="SOIC16LWB">
+<connects>
+<connect gate="G$1" pin="DISABLE" pad="5"/>
+<connect gate="G$1" pin="DT" pad="6"/>
+<connect gate="G$1" pin="GNDA" pad="14"/>
+<connect gate="G$1" pin="GNDB" pad="9"/>
+<connect gate="G$1" pin="GNDI" pad="4"/>
+<connect gate="G$1" pin="PWM" pad="1"/>
+<connect gate="G$1" pin="VDDA" pad="16"/>
+<connect gate="G$1" pin="VDDB" pad="11"/>
+<connect gate="G$1" pin="VDDI" pad="3 8"/>
+<connect gate="G$1" pin="VOA" pad="15"/>
+<connect gate="G$1" pin="VOB" pad="10"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="R1200">
+<gates>
+<gate name="G$1" symbol="R1200" x="0" y="2.54"/>
+</gates>
+<devices>
+<device name="SOT-23-6" package="SOT-23-6">
+<connects>
+<connect gate="G$1" pin="CE" pad="1"/>
+<connect gate="G$1" pin="GND" pad="5"/>
+<connect gate="G$1" pin="LX" pad="4"/>
+<connect gate="G$1" pin="VDD" pad="3"/>
+<connect gate="G$1" pin="VFB" pad="6"/>
+<connect gate="G$1" pin="VOUT" pad="2"/>
+</connects>
 <technologies>
 <technology name=""/>
 </technologies>
