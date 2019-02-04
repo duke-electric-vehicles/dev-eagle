@@ -2531,9 +2531,9 @@ Metric Code Size 4564</description>
 <wire x1="2.032" y1="0.762" x2="-2.032" y2="0.762" width="0.127" layer="21"/>
 <wire x1="-2.032" y1="0.762" x2="-2.032" y2="-0.254" width="0.127" layer="21"/>
 <wire x1="-2.032" y1="-0.254" x2="-1.524" y2="-0.762" width="0.127" layer="21"/>
-<pad name="1" x="-1.27" y="0" drill="0.7" diameter="1.016"/>
-<pad name="2" x="0" y="0" drill="0.7" diameter="1.016"/>
-<pad name="3" x="1.27" y="0" drill="0.7" diameter="1.016"/>
+<pad name="1" x="-1.27" y="0" drill="0.56" diameter="1.016"/>
+<pad name="2" x="0" y="0" drill="0.56" diameter="1.016" first="yes"/>
+<pad name="3" x="1.27" y="0" drill="0.56" diameter="1.016"/>
 <text x="-2.159" y="0" size="0.6096" layer="25" font="vector" ratio="25" rot="R270" align="top-center">&gt;NAME</text>
 <text x="0" y="0.889" size="0.6096" layer="21" font="vector" ratio="25" rot="R180" align="top-center">+  -  S</text>
 </package>
