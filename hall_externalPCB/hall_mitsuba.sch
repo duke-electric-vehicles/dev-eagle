@@ -2545,6 +2545,20 @@ wave soldering</description>
 <rectangle x1="-1.1684" y1="-1.2954" x2="-0.7112" y2="-0.7112" layer="51"/>
 <rectangle x1="-0.5001" y1="-0.5001" x2="0.5001" y2="0.5001" layer="35"/>
 </package>
+<package name="8PINVALULOK">
+<pad name="2" x="0" y="0" drill="1.6"/>
+<pad name="1" x="0" y="5.5" drill="1.6" shape="square"/>
+<pad name="4" x="4.2" y="0" drill="1.6"/>
+<pad name="3" x="4.2" y="5.5" drill="1.6"/>
+<pad name="6" x="8.4" y="0" drill="1.6"/>
+<pad name="5" x="8.4" y="5.5" drill="1.6"/>
+<pad name="8" x="12.6" y="0" drill="1.6"/>
+<pad name="7" x="12.6" y="5.5" drill="1.6"/>
+<wire x1="-2.7" y1="-2.25" x2="-2.7" y2="7.75" width="0.127" layer="51"/>
+<wire x1="-2.7" y1="7.75" x2="15.3" y2="7.75" width="0.127" layer="51"/>
+<wire x1="15.3" y1="7.75" x2="15.3" y2="-2.25" width="0.127" layer="51"/>
+<wire x1="15.3" y1="-2.25" x2="-2.7" y2="-2.25" width="0.127" layer="51"/>
+</package>
 </packages>
 <symbols>
 <symbol name="HALL">
@@ -2560,6 +2574,20 @@ wave soldering</description>
 <text x="-7.62" y="5.08" size="1.27" layer="95" font="vector" ratio="25">&gt;NAME</text>
 <text x="2.54" y="5.08" size="1.27" layer="95" font="vector" ratio="25">HALL</text>
 </symbol>
+<symbol name="HEADER8">
+<wire x1="2.54" y1="12.7" x2="-5.08" y2="12.7" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="12.7" x2="-5.08" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-10.16" x2="2.54" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-10.16" x2="2.54" y2="12.7" width="0.254" layer="94"/>
+<pin name="1" x="7.62" y="-7.62" length="middle" rot="R180"/>
+<pin name="2" x="7.62" y="-5.08" length="middle" rot="R180"/>
+<pin name="3" x="7.62" y="-2.54" length="middle" rot="R180"/>
+<pin name="4" x="7.62" y="0" length="middle" rot="R180"/>
+<pin name="5" x="7.62" y="2.54" length="middle" rot="R180"/>
+<pin name="6" x="7.62" y="5.08" length="middle" rot="R180"/>
+<pin name="7" x="7.62" y="7.62" length="middle" rot="R180"/>
+<pin name="8" x="7.62" y="10.16" length="middle" rot="R180"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="HALL">
@@ -2572,6 +2600,28 @@ wave soldering</description>
 <connect gate="G$1" pin="GND" pad="3"/>
 <connect gate="G$1" pin="OUT" pad="2"/>
 <connect gate="G$1" pin="VCC" pad="1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="HEADER8">
+<gates>
+<gate name="G$1" symbol="HEADER8" x="0" y="0"/>
+</gates>
+<devices>
+<device name="DEFAULT" package="8PINVALULOK">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+<connect gate="G$1" pin="4" pad="4"/>
+<connect gate="G$1" pin="5" pad="5"/>
+<connect gate="G$1" pin="6" pad="6"/>
+<connect gate="G$1" pin="7" pad="7"/>
+<connect gate="G$1" pin="8" pad="8"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -2606,6 +2656,7 @@ wave soldering</description>
 <part name="P+4" library="supply1" deviceset="+5V" device=""/>
 <part name="GND4" library="supply1" deviceset="GND" device=""/>
 <part name="J1" library="sc_usercreated" deviceset="HEADER_SIDE_5POS" device=""/>
+<part name="U$1" library="Custom_new" deviceset="HEADER8" device="DEFAULT"/>
 </parts>
 <sheets>
 <sheet>
@@ -2627,6 +2678,7 @@ wave soldering</description>
 <instance part="P+4" gate="1" x="99.06" y="12.7"/>
 <instance part="GND4" gate="1" x="99.06" y="0" rot="MR0"/>
 <instance part="J1" gate="G$1" x="114.3" y="15.24" rot="R270"/>
+<instance part="U$1" gate="G$1" x="-7.62" y="17.78"/>
 </instances>
 <busses>
 </busses>
@@ -2669,6 +2721,11 @@ wave soldering</description>
 <wire x1="106.68" y1="12.7" x2="111.76" y2="12.7" width="0.1524" layer="91"/>
 <pinref part="P+4" gate="1" pin="+5V"/>
 <pinref part="J1" gate="G$1" pin="4"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="2"/>
+<wire x1="0" y1="12.7" x2="2.54" y2="12.7" width="0.1524" layer="91"/>
+<label x="2.54" y="12.7" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -2713,8 +2770,35 @@ wave soldering</description>
 <pinref part="J1" gate="G$1" pin="5"/>
 <pinref part="GND4" gate="1" pin="GND"/>
 </segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="1"/>
+<wire x1="0" y1="10.16" x2="2.54" y2="10.16" width="0.1524" layer="91"/>
+<label x="2.54" y="10.16" size="1.27" layer="95" xref="yes"/>
+</segment>
 </net>
-<net name="N$2" class="0">
+<net name="HALL_B" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="3"/>
+<wire x1="0" y1="15.24" x2="2.54" y2="15.24" width="0.1524" layer="91"/>
+<label x="2.54" y="15.24" size="1.27" layer="95" xref="yes"/>
+</segment>
+<segment>
+<wire x1="45.72" y1="20.32" x2="40.64" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="78.74" y1="17.78" x2="111.76" y2="17.78" width="0.1524" layer="91"/>
+<wire x1="45.72" y1="20.32" x2="78.74" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="78.74" y1="20.32" x2="78.74" y2="17.78" width="0.1524" layer="91"/>
+<junction x="40.64" y="60.96"/>
+<pinref part="U2" gate="G$1" pin="OUT"/>
+<pinref part="J1" gate="G$1" pin="2"/>
+<label x="40.64" y="58.42" size="1.27" layer="95" rot="R270" xref="yes"/>
+</segment>
+</net>
+<net name="HALL_A" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="4"/>
+<wire x1="0" y1="17.78" x2="2.54" y2="17.78" width="0.1524" layer="91"/>
+<label x="2.54" y="17.78" size="1.27" layer="95" xref="yes"/>
+</segment>
 <segment>
 <wire x1="15.24" y1="60.96" x2="20.32" y2="15.24" width="0.1524" layer="91"/>
 <wire x1="111.76" y1="20.32" x2="81.28" y2="20.32" width="0.1524" layer="91"/>
@@ -2727,26 +2811,22 @@ wave soldering</description>
 <junction x="15.24" y="60.96"/>
 <pinref part="U1" gate="G$1" pin="OUT"/>
 <pinref part="J1" gate="G$1" pin="1"/>
+<label x="15.24" y="60.96" size="1.27" layer="95" rot="R270" xref="yes"/>
 </segment>
 </net>
-<net name="N$4" class="0">
+<net name="HALL_C" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="5"/>
+<wire x1="0" y1="20.32" x2="2.54" y2="20.32" width="0.1524" layer="91"/>
+<label x="2.54" y="20.32" size="1.27" layer="95" xref="yes"/>
+</segment>
 <segment>
 <wire x1="66.04" y1="60.96" x2="71.12" y2="15.24" width="0.1524" layer="91"/>
 <wire x1="71.12" y1="15.24" x2="111.76" y2="15.24" width="0.1524" layer="91"/>
 <junction x="66.04" y="60.96"/>
 <pinref part="U3" gate="G$1" pin="OUT"/>
 <pinref part="J1" gate="G$1" pin="3"/>
-</segment>
-</net>
-<net name="N$7" class="0">
-<segment>
-<wire x1="45.72" y1="20.32" x2="40.64" y2="60.96" width="0.1524" layer="91"/>
-<wire x1="78.74" y1="17.78" x2="111.76" y2="17.78" width="0.1524" layer="91"/>
-<wire x1="45.72" y1="20.32" x2="78.74" y2="20.32" width="0.1524" layer="91"/>
-<wire x1="78.74" y1="20.32" x2="78.74" y2="17.78" width="0.1524" layer="91"/>
-<junction x="40.64" y="60.96"/>
-<pinref part="U2" gate="G$1" pin="OUT"/>
-<pinref part="J1" gate="G$1" pin="2"/>
+<label x="66.04" y="58.42" size="1.27" layer="95" rot="R270" xref="yes"/>
 </segment>
 </net>
 </nets>
