@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.7.1">
+<eagle version="9.1.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -3279,7 +3279,7 @@ Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LE
 <instance part="U$16" gate="G$1" x="45.72" y="149.86"/>
 <instance part="U$17" gate="G$1" x="129.54" y="149.86"/>
 <instance part="Q7" gate="G$1" x="91.44" y="147.32"/>
-<instance part="Q8" gate="G$1" x="111.76" y="160.02" rot="R90"/>
+<instance part="Q8" gate="G$1" x="111.76" y="160.02" rot="MR90"/>
 <instance part="U$20" gate="G$1" x="129.54" y="271.78"/>
 <instance part="U$5" gate="G$1" x="170.18" y="274.32"/>
 <instance part="U$14" gate="G$1" x="289.56" y="121.92"/>
@@ -3295,13 +3295,21 @@ Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LE
 <net name="FC_POS" class="0">
 <segment>
 <wire x1="91.44" y1="160.02" x2="91.44" y2="152.4" width="0.1524" layer="91"/>
-<wire x1="91.44" y1="160.02" x2="106.68" y2="160.02" width="0.1524" layer="91"/>
 <pinref part="U$1" gate="G$1" pin="I+"/>
 <wire x1="73.66" y1="160.02" x2="91.44" y2="160.02" width="0.1524" layer="91"/>
-<junction x="91.44" y="160.02"/>
 <label x="83.82" y="160.02" size="1.778" layer="95"/>
-<pinref part="Q8" gate="G$1" pin="D"/>
 <pinref part="Q7" gate="G$1" pin="D"/>
+<pinref part="Q8" gate="G$1" pin="S"/>
+<wire x1="106.68" y1="160.02" x2="91.44" y2="160.02" width="0.1524" layer="91"/>
+<junction x="91.44" y="160.02"/>
+</segment>
+<segment>
+<pinref part="U$6" gate="G$1" pin="TS"/>
+<label x="304.8" y="73.66" size="1.778" layer="95"/>
+<wire x1="302.26" y1="73.66" x2="327.66" y2="73.66" width="0.1524" layer="91"/>
+<pinref part="C5" gate="G$1" pin="2"/>
+<wire x1="327.66" y1="73.66" x2="327.66" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="327.66" y1="76.2" x2="325.12" y2="76.2" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="SC_G" class="0">
@@ -3924,24 +3932,16 @@ Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LE
 <net name="CAP_OUT" class="0">
 <segment>
 <pinref part="U$10" gate="G$1" pin="PAD"/>
-<wire x1="116.84" y1="160.02" x2="124.46" y2="160.02" width="0.1524" layer="91"/>
 <label x="119.38" y="160.02" size="1.778" layer="95"/>
 <pinref part="U$12" gate="G$1" pin="V+"/>
 <wire x1="124.46" y1="160.02" x2="129.54" y2="160.02" width="0.1524" layer="91"/>
 <wire x1="124.46" y1="154.94" x2="124.46" y2="160.02" width="0.1524" layer="91"/>
-<junction x="124.46" y="160.02"/>
 <pinref part="U$17" gate="G$1" pin="2"/>
 <wire x1="129.54" y1="154.94" x2="129.54" y2="160.02" width="0.1524" layer="91"/>
 <junction x="129.54" y="160.02"/>
-<pinref part="Q8" gate="G$1" pin="S"/>
-</segment>
-<segment>
-<pinref part="U$6" gate="G$1" pin="TS"/>
-<label x="304.8" y="73.66" size="1.778" layer="95"/>
-<wire x1="302.26" y1="73.66" x2="327.66" y2="73.66" width="0.1524" layer="91"/>
-<pinref part="C5" gate="G$1" pin="2"/>
-<wire x1="327.66" y1="73.66" x2="327.66" y2="76.2" width="0.1524" layer="91"/>
-<wire x1="327.66" y1="76.2" x2="325.12" y2="76.2" width="0.1524" layer="91"/>
+<pinref part="Q8" gate="G$1" pin="D"/>
+<wire x1="116.84" y1="160.02" x2="124.46" y2="160.02" width="0.1524" layer="91"/>
+<junction x="124.46" y="160.02"/>
 </segment>
 <segment>
 <pinref part="IC1" gate="G$1" pin="IN"/>
