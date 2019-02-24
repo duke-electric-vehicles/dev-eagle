@@ -1042,6 +1042,27 @@ D1787-AL</text>
 <text x="0" y="0" size="0.6096" layer="25" align="center">&gt;NAME</text>
 <smd name="PAD" x="0" y="0" dx="1.524" dy="1.8796" layer="1"/>
 </package>
+<package name="SOT23W">
+<description>&lt;b&gt;SMALL OUTLINE TRANSISTOR&lt;/b&gt;&lt;p&gt;
+wave soldering</description>
+<wire x1="-1.973" y1="1.983" x2="1.973" y2="1.983" width="0.0508" layer="39"/>
+<wire x1="1.973" y1="-1.983" x2="-1.973" y2="-1.983" width="0.0508" layer="39"/>
+<wire x1="-1.973" y1="-1.983" x2="-1.973" y2="1.983" width="0.0508" layer="39"/>
+<wire x1="1.973" y1="1.983" x2="1.973" y2="-1.983" width="0.0508" layer="39"/>
+<wire x1="1.422" y1="0.66" x2="1.422" y2="-0.66" width="0.1524" layer="51"/>
+<wire x1="1.422" y1="-0.66" x2="-1.422" y2="-0.66" width="0.1524" layer="51"/>
+<wire x1="-1.422" y1="-0.66" x2="-1.422" y2="0.66" width="0.1524" layer="51"/>
+<wire x1="-1.422" y1="0.66" x2="1.422" y2="0.66" width="0.1524" layer="51"/>
+<smd name="3" x="0" y="1.303" dx="1" dy="1.4" layer="1"/>
+<smd name="2" x="0.95" y="-1.303" dx="1" dy="1.4" layer="1"/>
+<smd name="1" x="-0.95" y="-1.303" dx="1" dy="1.4" layer="1"/>
+<text x="-2.03" y="2.0701" size="0.6096" layer="25" font="vector" ratio="25">&gt;NAME</text>
+<text x="-1.9949" y="-3.3701" size="0.6096" layer="27" font="vector" ratio="25">&gt;VALUE</text>
+<rectangle x1="-0.2286" y1="0.7112" x2="0.2286" y2="1.2954" layer="51"/>
+<rectangle x1="0.7112" y1="-1.2954" x2="1.1684" y2="-0.7112" layer="51"/>
+<rectangle x1="-1.1684" y1="-1.2954" x2="-0.7112" y2="-0.7112" layer="51"/>
+<rectangle x1="-0.5001" y1="-0.5001" x2="0.5001" y2="0.5001" layer="35"/>
+</package>
 </packages>
 <symbols>
 <symbol name="SUPERCAP">
@@ -1519,6 +1540,19 @@ D1787-AL</text>
 <pin name="RS" x="15.24" y="7.62" length="middle" direction="in" rot="R180"/>
 <text x="0" y="12.7" size="1.778" layer="95" align="center">&gt;NAME</text>
 <text x="0" y="-12.7" size="1.778" layer="96" align="center">&gt;VALUE</text>
+</symbol>
+<symbol name="HALL">
+<wire x1="-7.62" y1="7.62" x2="7.62" y2="7.62" width="0.254" layer="94"/>
+<wire x1="7.62" y1="7.62" x2="7.62" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-2.54" x2="-7.62" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-2.54" x2="-7.62" y2="7.62" width="0.254" layer="94"/>
+<pin name="VCC" x="-5.08" y="-7.62" length="middle" rot="R90"/>
+<pin name="GND" x="5.08" y="-7.62" length="middle" rot="R90"/>
+<pin name="OUT" x="0" y="-7.62" length="middle" rot="R90"/>
+<text x="-7.62" y="10.16" size="1.27" layer="25" font="vector" ratio="25">&gt;NAME</text>
+<text x="-7.62" y="10.16" size="1.27" layer="25" font="vector" ratio="25">&gt;NAME</text>
+<text x="-7.62" y="5.08" size="1.27" layer="95" font="vector" ratio="25">&gt;NAME</text>
+<text x="2.54" y="5.08" size="1.27" layer="95" font="vector" ratio="25">HALL</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -2359,6 +2393,23 @@ Standard 7805 5V regulator. IGO (Input Ground Output). Spark Fun Electronics SKU
 <connect gate="G$1" pin="RS" pad="8"/>
 <connect gate="G$1" pin="VCC" pad="3"/>
 <connect gate="G$1" pin="VREF" pad="5"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="HALL">
+<gates>
+<gate name="G$1" symbol="HALL" x="0" y="0"/>
+</gates>
+<devices>
+<device name="_SOT23W" package="SOT23W">
+<connects>
+<connect gate="G$1" pin="GND" pad="3"/>
+<connect gate="G$1" pin="OUT" pad="2"/>
+<connect gate="G$1" pin="VCC" pad="1"/>
 </connects>
 <technologies>
 <technology name=""/>
