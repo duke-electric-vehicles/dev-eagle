@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.2.0">
+<eagle version="9.1.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -576,6 +576,19 @@ Source: &lt;a href="http://www.ti.com/lit/ds/symlink/lm1117-n.pdf"&gt;http://www
 <text x="-4.445" y="23.114" size="0.6096" layer="25" font="vector" ratio="20">&gt;NAME</text>
 <text x="-4.318" y="-23.749" size="0.6096" layer="27" font="vector" ratio="20">&gt;VALUE</text>
 </package>
+<package name="PAD">
+<smd name="PAD" x="0" y="0" dx="10.16" dy="5.08" layer="1"/>
+</package>
+<package name="AUTO_FUSE">
+<wire x1="-3.3" y1="5.1" x2="-3.3" y2="-1.7" width="0.127" layer="51"/>
+<wire x1="-3.3" y1="-1.7" x2="16.8" y2="-1.7" width="0.127" layer="51"/>
+<wire x1="16.8" y1="-1.7" x2="16.8" y2="5.1" width="0.127" layer="51"/>
+<wire x1="16.8" y1="5.1" x2="-3.3" y2="5.1" width="0.127" layer="51"/>
+<pad name="1A" x="0" y="3.4" drill="1.75" shape="octagon"/>
+<pad name="1B" x="0" y="0" drill="1.75" shape="octagon"/>
+<pad name="2A" x="13.47" y="3.4" drill="1.75" shape="octagon"/>
+<pad name="2B" x="13.47" y="0" drill="1.75" shape="octagon"/>
+</package>
 </packages>
 <symbols>
 <symbol name="EXB-2HV">
@@ -791,6 +804,19 @@ Source: &lt;a href="http://www.ti.com/lit/ds/symlink/lm1117-n.pdf"&gt;http://www
 <wire x1="7.62" y1="35.56" x2="7.62" y2="-40.64" width="0.254" layer="94"/>
 <wire x1="7.62" y1="-40.64" x2="-7.62" y2="-40.64" width="0.254" layer="94"/>
 <wire x1="-7.62" y1="-40.64" x2="-7.62" y2="-38.1" width="0.254" layer="94"/>
+</symbol>
+<symbol name="PAD">
+<pin name="PAD" x="-7.62" y="0" length="middle"/>
+<wire x1="-2.54" y1="2.54" x2="-2.54" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-2.54" x2="5.08" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="5.08" y1="-2.54" x2="5.08" y2="2.54" width="0.254" layer="94"/>
+<wire x1="5.08" y1="2.54" x2="-2.54" y2="2.54" width="0.254" layer="94"/>
+</symbol>
+<symbol name="FUSE">
+<pin name="1" x="-7.62" y="0" length="short"/>
+<wire x1="-5.08" y1="0" x2="0" y2="0" width="0.254" layer="94" curve="-180"/>
+<wire x1="5.08" y1="0" x2="0" y2="0" width="0.254" layer="94" curve="-180"/>
+<pin name="2" x="7.62" y="0" length="short" rot="R180"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -1089,6 +1115,37 @@ Source: &lt;a href="http://www.ti.com/lit/ds/symlink/lm1117-n.pdf"&gt;http://www
 <connect gate="G$1" pin="P$7" pad="7"/>
 <connect gate="G$1" pin="P$8" pad="8"/>
 <connect gate="G$1" pin="P$9" pad="9"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="PAD">
+<gates>
+<gate name="G$1" symbol="PAD" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="PAD">
+<connects>
+<connect gate="G$1" pin="PAD" pad="PAD"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="FUSE">
+<gates>
+<gate name="G$1" symbol="FUSE" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="AUTO_FUSE">
+<connects>
+<connect gate="G$1" pin="1" pad="1A 1B"/>
+<connect gate="G$1" pin="2" pad="2A 2B"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -3745,6 +3802,10 @@ JST PH 2-pin thru-home side entry</description>
 <part name="R43" library="SparkFun-Passives" deviceset="RESISTOR" device="0603-RES" value="47k"/>
 <part name="R44" library="SparkFun-Passives" deviceset="RESISTOR" device="0603-RES" value="47k"/>
 <part name="U$1" library="Custom_old" deviceset="30_HEADER" device=""/>
+<part name="VOUT+" library="Custom_old" deviceset="PAD" device=""/>
+<part name="VOUT-" library="Custom_old" deviceset="PAD" device=""/>
+<part name="U$2" library="Custom_old" deviceset="FUSE" device=""/>
+<part name="VOUT_FUSED" library="Custom_old" deviceset="PAD" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -4558,9 +4619,9 @@ Module</text>
 <attribute name="NAME" x="450.85" y="-109.855" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="450.85" y="-99.06" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="CN9" gate="G$1" x="246.38" y="132.08" rot="R180">
-<attribute name="NAME" x="252.73" y="126.365" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="252.73" y="137.16" size="1.778" layer="96" rot="R180"/>
+<instance part="CN9" gate="G$1" x="264.16" y="134.62" rot="R180">
+<attribute name="NAME" x="270.51" y="128.905" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="270.51" y="139.7" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="R1" gate="G$1" x="-5.08" y="45.72" rot="R90">
 <attribute name="NAME" x="-6.5786" y="41.91" size="1.778" layer="95" rot="R90"/>
@@ -4595,6 +4656,10 @@ Module</text>
 <attribute name="VALUE" x="-1.778" y="-74.93" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="U$1" gate="G$1" x="340.36" y="162.56"/>
+<instance part="VOUT+" gate="G$1" x="261.62" y="134.62" rot="R180"/>
+<instance part="VOUT-" gate="G$1" x="261.62" y="132.08" rot="R180"/>
+<instance part="U$2" gate="G$1" x="274.32" y="142.24" rot="R90"/>
+<instance part="VOUT_FUSED" gate="G$1" x="264.16" y="149.86" rot="R180"/>
 </instances>
 <busses>
 </busses>
@@ -5592,8 +5657,11 @@ Module</text>
 </segment>
 <segment>
 <pinref part="CN9" gate="G$1" pin="1"/>
-<wire x1="248.92" y1="129.54" x2="259.08" y2="129.54" width="0.1524" layer="91"/>
-<label x="259.08" y="129.54" size="1.778" layer="95"/>
+<wire x1="266.7" y1="132.08" x2="269.24" y2="132.08" width="0.1524" layer="91"/>
+<label x="276.86" y="132.08" size="1.778" layer="95" xref="yes"/>
+<pinref part="VOUT-" gate="G$1" pin="PAD"/>
+<wire x1="269.24" y1="132.08" x2="276.86" y2="132.08" width="0.1524" layer="91"/>
+<junction x="269.24" y="132.08"/>
 </segment>
 </net>
 <net name="PWM_A" class="0">
@@ -7264,8 +7332,14 @@ Module</text>
 </segment>
 <segment>
 <pinref part="CN9" gate="G$1" pin="2"/>
-<wire x1="248.92" y1="132.08" x2="259.08" y2="132.08" width="0.1524" layer="91"/>
-<label x="259.08" y="132.08" size="1.778" layer="95"/>
+<wire x1="266.7" y1="134.62" x2="269.24" y2="134.62" width="0.1524" layer="91"/>
+<label x="276.86" y="134.62" size="1.778" layer="95" xref="yes"/>
+<pinref part="VOUT+" gate="G$1" pin="PAD"/>
+<wire x1="269.24" y1="134.62" x2="274.32" y2="134.62" width="0.1524" layer="91"/>
+<junction x="269.24" y="134.62"/>
+<pinref part="U$2" gate="G$1" pin="1"/>
+<wire x1="274.32" y1="134.62" x2="276.86" y2="134.62" width="0.1524" layer="91"/>
+<junction x="274.32" y="134.62"/>
 </segment>
 </net>
 <net name="V_LOW_H" class="0">
@@ -7479,6 +7553,14 @@ Module</text>
 <segment>
 <pinref part="U$1" gate="G$1" pin="P$30"/>
 <wire x1="353.06" y1="124.46" x2="363.22" y2="124.46" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="VOUT_FUSED" class="0">
+<segment>
+<pinref part="U$2" gate="G$1" pin="2"/>
+<pinref part="VOUT_FUSED" gate="G$1" pin="PAD"/>
+<wire x1="271.78" y1="149.86" x2="274.32" y2="149.86" width="0.1524" layer="91"/>
+<label x="274.32" y="149.86" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 </nets>
