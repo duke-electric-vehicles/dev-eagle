@@ -3,7 +3,7 @@
 <eagle version="9.1.1">
 <drawing>
 <settings>
-<setting alwaysvectorfont="no"/>
+<setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="1" unitdist="mm" unit="mm" style="lines" multiple="1" display="no" altdistance="0.1" altunitdist="mm" altunit="mm"/>
@@ -36,8 +36,8 @@
 <layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
-<layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="3" visible="yes" active="yes"/>
+<layer number="30" name="bStop" color="7" fill="6" visible="yes" active="yes"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
 <layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
 <layer number="33" name="tFinish" color="6" fill="3" visible="no" active="yes"/>
@@ -168,6 +168,11 @@
 <wire x1="50" y1="22.9129" x2="22.9129" y2="50" width="0.254" layer="20" curve="40.760045"/>
 <wire x1="22.9129" y1="50" x2="-22.9129" y2="50" width="0.254" layer="20"/>
 <text x="-67" y="48" size="1.778" layer="49">240° / (32 poles) = 7.5° separation</text>
+<text x="1" y="42" size="1.27" layer="21" font="vector" ratio="15" align="center">Mitsuba Hall Sensor PCB mount test
+Designed Feb 22, 2019 by Gerry Chen</text>
+<text x="0" y="33" size="1.27" layer="21" font="vector" ratio="15" align="center">3x hall sensors
+7.5° separation
+centered 45° from vertical</text>
 </plain>
 <libraries>
 <library name="rcl">
@@ -271,6 +276,61 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="1.524" y1="0.762" x2="1.524" y2="-0.762" width="0.0762" layer="21"/>
 <wire x1="1.524" y1="-0.762" x2="-1.524" y2="-0.762" width="0.0762" layer="21"/>
 <wire x1="-1.524" y1="-0.762" x2="-1.524" y2="0.762" width="0.0762" layer="21"/>
+</package>
+</packages>
+</library>
+<library name="Custom_old">
+<packages>
+<package name="DEV">
+<polygon width="0.0254" layer="29">
+<vertex x="0" y="0"/>
+<vertex x="0" y="4.7244"/>
+<vertex x="0.9144" y="4.7244"/>
+<vertex x="0.9144" y="0"/>
+</polygon>
+<polygon width="0.0254" layer="29">
+<vertex x="0.9144" y="3.8354"/>
+<vertex x="1.6256" y="3.8354" curve="-90"/>
+<vertex x="2.8702" y="2.5908"/>
+<vertex x="2.8702" y="2.1336" curve="-90"/>
+<vertex x="1.651" y="0.9144"/>
+<vertex x="0.9144" y="0.9144"/>
+<vertex x="0.9144" y="0"/>
+<vertex x="1.5748" y="0" curve="90"/>
+<vertex x="3.81" y="2.2352"/>
+<vertex x="3.81" y="2.6924" curve="90"/>
+<vertex x="1.778" y="4.7244"/>
+<vertex x="0.9144" y="4.7244"/>
+</polygon>
+<polygon width="0.0254" layer="29">
+<vertex x="4.7752" y="3.0226"/>
+<vertex x="4.7752" y="3.8354"/>
+<vertex x="7.112" y="3.8354"/>
+<vertex x="7.112" y="4.7498"/>
+<vertex x="7.975875" y="4.7498"/>
+<vertex x="7.9756" y="1.0668"/>
+<vertex x="10.7188" y="4.7498"/>
+<vertex x="11.9634" y="4.7498"/>
+<vertex x="8.2042" y="0.0508"/>
+<vertex x="7.1374" y="0.0508"/>
+<vertex x="7.1374" y="0.9652"/>
+<vertex x="4.7752" y="0.9652"/>
+<vertex x="4.7752" y="2.0828"/>
+<vertex x="6.1214" y="2.0828"/>
+<vertex x="6.1214" y="3.0226"/>
+</polygon>
+<polygon width="0" layer="29">
+<vertex x="7.142909375" y="4.76305625"/>
+<vertex x="-0.021115625" y="4.7558375"/>
+<vertex x="-0.011040625" y="4.512884375"/>
+<vertex x="7.14284375" y="4.524834375"/>
+</polygon>
+<polygon width="0" layer="29">
+<vertex x="7.14940625" y="0.04236875"/>
+<vertex x="0" y="-0.010590625"/>
+<vertex x="0.02063125" y="0.25106875"/>
+<vertex x="7.149884375" y="0.25106875"/>
+</polygon>
 </package>
 </packages>
 </library>
@@ -483,6 +543,8 @@ design rules under a new name.</description>
 <element name="C4" library="SparkFun-Passives" package="0603-CAP" value="" x="-34" y="24.4142125" rot="MR45"/>
 <element name="C5" library="SparkFun-Passives" package="0603-CAP" value="" x="-30.25735625" y="28.971571875" rot="MR45"/>
 <element name="C6" library="SparkFun-Passives" package="0603-CAP" value="" x="-25.714715625" y="32.82893125" rot="MR45"/>
+<element name="U$2" library="Custom_old" package="DEV" value="" x="-43" y="10"/>
+<element name="U$3" library="Custom_old" package="DEV" value="" x="29" y="1"/>
 </elements>
 <signals>
 <signal name="+5V">
@@ -553,6 +615,36 @@ design rules under a new name.</description>
 <wire x1="-23.98859375" y1="15.07905" x2="-29.07905" y2="15.07905" width="0.1524" layer="16"/>
 <wire x1="-39.03578125" y1="25.03578125" x2="-39.03578125" y2="29.9533" width="0.1524" layer="16"/>
 <wire x1="-29.07905" y1="15.07905" x2="-39.03578125" y2="25.03578125" width="0.1524" layer="16"/>
+<polygon width="0.1524" layer="1">
+<vertex x="-49" y="-23"/>
+<vertex x="-49" y="24"/>
+<vertex x="-23" y="50"/>
+<vertex x="23" y="50"/>
+<vertex x="50" y="23"/>
+<vertex x="50" y="-23"/>
+<vertex x="23" y="-50"/>
+<vertex x="-22" y="-50"/>
+</polygon>
+<polygon width="0.1524" layer="1">
+<vertex x="-49" y="-23"/>
+<vertex x="-49" y="24"/>
+<vertex x="-23" y="50"/>
+<vertex x="23" y="50"/>
+<vertex x="50" y="23"/>
+<vertex x="50" y="-23"/>
+<vertex x="23" y="-50"/>
+<vertex x="-22" y="-50"/>
+</polygon>
+<polygon width="0.1524" layer="16">
+<vertex x="-49" y="-25"/>
+<vertex x="-49" y="24"/>
+<vertex x="-23" y="50"/>
+<vertex x="23" y="50"/>
+<vertex x="50" y="23"/>
+<vertex x="50" y="-23"/>
+<vertex x="23" y="-50"/>
+<vertex x="-24" y="-50"/>
+</polygon>
 </signal>
 <signal name="HALL_B">
 <contactref element="U$1" pad="3"/>
@@ -614,6 +706,10 @@ design rules under a new name.</description>
 </board>
 </drawing>
 <compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
 <note version="8.3" severity="warning">
 Since Version 8.3, EAGLE supports Fusion synchronisation.
 This feature will not be available in this version and saving
