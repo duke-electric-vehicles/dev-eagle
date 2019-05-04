@@ -1,0 +1,49 @@
+update
+Hello from the updater!
+Current version is 1.04
+
+Found version file containing 1.04
+
+Versions match! Nothing to do!
+install
+Script self: /Users/Gerry/Documents/EAGLE/ulps/oshpark.ulp
+Script self dir: /Users/Gerry/Documents/EAGLE/ulps/
+File source dir: /Users/Gerry/Documents/EAGLE/ulps//tmp_oshpark/
+ULP Dir: /Users/Gerry/Documents/EAGLE/ulps
+SCR Dir: /Users/Gerry/Documents/EAGLE/scripts
+BIN Dir: /Applications/EAGLE-9.1.1/eagle.app/Contents/MacOS/
+Found Eagle Version 9.100000
+Checking oshpark-install.ulp and /Users/Gerry/Documents/EAGLE/ulps/oshpark-install.ulp 
+> Identical! Do nothing...
+Checking oshpark-update.ulp and /Users/Gerry/Documents/EAGLE/ulps/oshpark-update.ulp 
+> Identical! Do nothing...
+Checking oshpark-upload.ulp and /Users/Gerry/Documents/EAGLE/ulps/oshpark-upload.ulp 
+> Identical! Do nothing...
+Checking oshpark-utility-includes.ulp and /Users/Gerry/Documents/EAGLE/ulps/oshpark-utility-includes.ulp 
+> Identical! Do nothing...
+Checking oshpark.ulp and /Users/Gerry/Documents/EAGLE/ulps/oshpark.ulp 
+> Identical! Do nothing...
+Checking oshpark.png and /Applications/EAGLE-9.1.1/eagle.app/Contents/MacOS//oshpark.png 
+> Identical! Do nothing...
+Checking oshpark-2layer-auto-routing.dru and /Users/Gerry/Documents/EAGLE/design rules/oshpark-2layer-auto-routing.dru 
+> Identical! Do nothing...
+Checking oshpark-2layer-tented.dru and /Users/Gerry/Documents/EAGLE/design rules/oshpark-2layer-tented.dru 
+> Identical! Do nothing...
+Checking oshpark-2layer.dru and /Users/Gerry/Documents/EAGLE/design rules/oshpark-2layer.dru 
+> Identical! Do nothing...
+Checking oshpark-4layer-tented.dru and /Users/Gerry/Documents/EAGLE/design rules/oshpark-4layer-tented.dru 
+> Identical! Do nothing...
+Checking oshpark-4layer.dru and /Users/Gerry/Documents/EAGLE/design rules/oshpark-4layer.dru 
+> Identical! Do nothing...
+Checking oshpark-2layer.cam and /Users/Gerry/Documents/EAGLE/cam/oshpark-2layer.cam 
+> Identical! Do nothing...
+Checking oshpark-4layer.cam and /Users/Gerry/Documents/EAGLE/cam/oshpark-4layer.cam 
+> Identical! Do nothing...
+Found a brd section from 8 to 18
+?? MENU ' [oshpark.png]Oshpark{Upload PCB: RUN oshpark-upload.ulp;|Check for updates: RUN oshpark.ulp update;|Update and install:RUN oshpark.ulp update install;} '; ??
+++ MENU ' [oshpark.png]Oshpark{Upload PCB: RUN oshpark-upload.ulp;|Check for updates: RUN oshpark.ulp update;|Update and install:RUN oshpark.ulp update install;} ';
+ ++
+Installing menu.!
+>> MENU ' [oshpark.png]Oshpark{Upload PCB: RUN oshpark-upload.ulp;|Check for updates: RUN oshpark.ulp update;|Update and install:RUN oshpark.ulp update install;} ';
+
+Done!!

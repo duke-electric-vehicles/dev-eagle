@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.7.1">
+<eagle version="9.1.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -1360,7 +1360,7 @@ D1787-AL</text>
 <wire x1="10.16" y1="7.62" x2="7.62" y2="5.08" width="0.254" layer="94"/>
 <wire x1="7.62" y1="5.08" x2="0" y2="5.08" width="0.254" layer="94"/>
 </symbol>
-<symbol name="IR21834">
+<symbol name="GATEDRIVER_IND_DT">
 <wire x1="-7.62" y1="-10.16" x2="-7.62" y2="10.16" width="0.254" layer="94"/>
 <wire x1="-7.62" y1="10.16" x2="7.62" y2="10.16" width="0.254" layer="94"/>
 <wire x1="7.62" y1="10.16" x2="7.62" y2="-10.16" width="0.254" layer="94"/>
@@ -1376,7 +1376,7 @@ D1787-AL</text>
 <pin name="VS" x="12.7" y="2.54" length="middle" rot="R180"/>
 <pin name="COM" x="12.7" y="-7.62" length="middle" rot="R180"/>
 <wire x1="-5.08" y1="1.016" x2="-2.286" y2="1.016" width="0.0762" layer="97"/>
-<text x="-7.62" y="-12.192" size="1.27" layer="97">IR21834</text>
+<text x="-7.62" y="-12.192" size="1.27" layer="97">&gt;NAME</text>
 </symbol>
 <symbol name="SCHOTTKY">
 <wire x1="-1.27" y1="-1.27" x2="1.27" y2="0" width="0.254" layer="94"/>
@@ -1503,6 +1503,39 @@ D1787-AL</text>
 <wire x1="-7.62" y1="-7.62" x2="10.16" y2="-7.62" width="0.254" layer="94"/>
 <wire x1="10.16" y1="-7.62" x2="10.16" y2="7.62" width="0.254" layer="94"/>
 <wire x1="10.16" y1="7.62" x2="-7.62" y2="7.62" width="0.254" layer="94"/>
+</symbol>
+<symbol name="GATEDRIVER_PWM_DT">
+<wire x1="-7.62" y1="-10.16" x2="-7.62" y2="10.16" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="10.16" x2="7.62" y2="10.16" width="0.254" layer="94"/>
+<wire x1="7.62" y1="10.16" x2="7.62" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-10.16" x2="-7.62" y2="-10.16" width="0.254" layer="94"/>
+<pin name="VCC" x="-12.7" y="7.62" length="middle"/>
+<pin name="VSS" x="-12.7" y="-7.62" length="middle"/>
+<pin name="IN" x="-12.7" y="2.54" length="middle"/>
+<pin name="SD" x="-12.7" y="0" length="middle"/>
+<pin name="DT" x="-12.7" y="-5.08" length="middle"/>
+<pin name="VB" x="12.7" y="7.62" length="middle" rot="R180"/>
+<pin name="LO" x="12.7" y="-2.54" length="middle" rot="R180"/>
+<pin name="HO" x="12.7" y="5.08" length="middle" rot="R180"/>
+<pin name="VS" x="12.7" y="2.54" length="middle" rot="R180"/>
+<pin name="COM" x="12.7" y="-7.62" length="middle" rot="R180"/>
+<wire x1="-5.08" y1="1.016" x2="-2.286" y2="1.016" width="0.0762" layer="97"/>
+<text x="-7.62" y="-12.192" size="1.27" layer="97">IR21834</text>
+</symbol>
+<symbol name="GATEDRIVER_IND">
+<wire x1="-7.62" y1="-12.7" x2="-7.62" y2="0" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="0" x2="7.62" y2="0" width="0.254" layer="94"/>
+<wire x1="7.62" y1="0" x2="7.62" y2="-12.7" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-12.7" x2="-7.62" y2="-12.7" width="0.254" layer="94"/>
+<pin name="VDD" x="-12.7" y="-2.54" length="middle"/>
+<pin name="HIN" x="-12.7" y="-5.08" length="middle"/>
+<pin name="LIN" x="-12.7" y="-7.62" length="middle"/>
+<pin name="VSS" x="-12.7" y="-10.16" length="middle"/>
+<pin name="HB" x="12.7" y="-2.54" length="middle" rot="R180"/>
+<pin name="HO" x="12.7" y="-5.08" length="middle" rot="R180"/>
+<pin name="VS" x="12.7" y="-7.62" length="middle" rot="R180"/>
+<pin name="LO" x="12.7" y="-10.16" length="middle" rot="R180"/>
+<text x="-7.62" y="-15.24" size="1.778" layer="97">&gt;NAME</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -2089,12 +2122,12 @@ Standard 7805 5V regulator. IGO (Input Ground Output). Spark Fun Electronics SKU
 </device>
 </devices>
 </deviceset>
-<deviceset name="IR21834">
+<deviceset name="GATEDRIVER_IND_DT">
 <gates>
-<gate name="G$1" symbol="IR21834" x="0" y="0"/>
+<gate name="G$1" symbol="GATEDRIVER_IND_DT" x="0" y="0"/>
 </gates>
 <devices>
-<device name="" package="SO14">
+<device name="_IR21834" package="SO14">
 <connects>
 <connect gate="G$1" pin="COM" pad="5"/>
 <connect gate="G$1" pin="DT" pad="4"/>
@@ -2321,6 +2354,52 @@ Standard 7805 5V regulator. IGO (Input Ground Output). Spark Fun Electronics SKU
 <connect gate="G$1" pin="TS" pad="8"/>
 <connect gate="G$1" pin="VCC" pad="1"/>
 <connect gate="G$1" pin="VCCUV" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="GATEDRIVER_PWM_DT">
+<gates>
+<gate name="G$1" symbol="GATEDRIVER_PWM_DT" x="0" y="0"/>
+</gates>
+<devices>
+<device name="_FAN7393A" package="SO14">
+<connects>
+<connect gate="G$1" pin="COM" pad="5"/>
+<connect gate="G$1" pin="DT" pad="4"/>
+<connect gate="G$1" pin="HO" pad="12"/>
+<connect gate="G$1" pin="IN" pad="1"/>
+<connect gate="G$1" pin="LO" pad="6"/>
+<connect gate="G$1" pin="SD" pad="2"/>
+<connect gate="G$1" pin="VB" pad="13"/>
+<connect gate="G$1" pin="VCC" pad="7"/>
+<connect gate="G$1" pin="VS" pad="11"/>
+<connect gate="G$1" pin="VSS" pad="3"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="GATEDRIVER_IND">
+<gates>
+<gate name="G$1" symbol="GATEDRIVER_IND" x="0" y="0"/>
+</gates>
+<devices>
+<device name="_ISL6700" package="SOIC8">
+<connects>
+<connect gate="G$1" pin="HB" pad="8"/>
+<connect gate="G$1" pin="HIN" pad="2"/>
+<connect gate="G$1" pin="HO" pad="7"/>
+<connect gate="G$1" pin="LIN" pad="3"/>
+<connect gate="G$1" pin="LO" pad="5"/>
+<connect gate="G$1" pin="VDD" pad="1"/>
+<connect gate="G$1" pin="VS" pad="6"/>
+<connect gate="G$1" pin="VSS" pad="4"/>
 </connects>
 <technologies>
 <technology name=""/>
