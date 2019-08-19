@@ -3852,6 +3852,15 @@ VS_A/B/C
 <wire x1="-10.16" y1="22.86" x2="-10.16" y2="10.16" width="0.1524" layer="97"/>
 <wire x1="-10.16" y1="10.16" x2="-48.26" y2="10.16" width="0.1524" layer="97"/>
 <text x="-45.72" y="20.32" size="1.778" layer="97">3V Precision Voltage Reference</text>
+<text x="-66.04" y="96.52" size="1.27" layer="91">LIST OF BODGES:
+* on Teensy: throttle to A18
+* throttle short R8
+* pullups on I2C
+* pullup on INA ALERT
+* 3.3V for INA (lolz)</text>
+<text x="-81.28" y="86.36" size="1.27" layer="91">Optional Upgrades:
+* Hall power cut trace and wire to 15
+* 3.3V buck - cut VIN trace and replace with 3.3V</text>
 </plain>
 <instances>
 <instance part="IC2" gate="G$1" x="114.3" y="45.72"/>
